@@ -13,7 +13,9 @@ dag_arg = {
 
 dag = DAG(
     'reddit_dag',
-    start_date=datetime(2024, 2, 5),
+    default_args = dag_arg,
+    schedule = '@weekly',
+    start_date=datetime(2024, 3, 6),
     catchup=True
 )
 
